@@ -85,16 +85,17 @@ function renderTopPerkIcons(perks, perkInfo) {
   return `<div class="perk-icon-strip">${tiles}</div>`;
 }
 
-// Renders a single-series horizontal bar chart: one bar per perk, length = usage_pct,
-// a small muted stat (kill/escape rate) shown beside the bar. No legend needed (one series).
+// Renders a single-series horizontal bar chart: one bar per perk, length = usage_pct
+// AS A REAL PERCENTAGE OF 0-100 (not rescaled to the top perk) so the bar width
+// always matches the printed number. A small muted stat (kill/escape rate) shown
+// beside the bar. No legend needed (one series).
 function renderPerkChart(perks, opts) {
   const accentVar = opts.side === "survivor" ? "var(--teal)" : "var(--red)";
   const rateLabel = opts.side === "survivor" ? "escape" : "kill";
-  const maxUsage = Math.max(...perks.map((p) => p.usage_pct), 1);
   const rows = perks
     .map((p) => {
       const rate = opts.side === "survivor" ? p.escape_pct : p.kill_pct;
-      const width = ((p.usage_pct / maxUsage) * 100).toFixed(1);
+      const width = Math.min(p.usage_pct, 100).toFixed(1);
       return `
         <div class="chart-bar-row">
           <div class="chart-bar-head">
