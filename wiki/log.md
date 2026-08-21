@@ -10,6 +10,9 @@ Append-only. New entries go at the TOP. Never edit past entries.
 
 ---
 
+## 2026-08-21 (8)
+Full roster pass. Pulled the complete killer list (44) and survivor list (54) from deadbydaylight.wiki.gg, discovered the wiki's image filenames follow a predictable `K##_Name_Portrait.png` / `S##_Name_Portrait.png` pattern matching list position, and batch-downloaded icons for all 44 killers and 53/54 survivors (The Troupe/paired-entity skipped). `docs/data/killers.json` and `survivors.json` now have every character with a name, power/lore blurb, icon, and null usage stats except the ~7 with confirmed real data. Added `wiki/killers/full-roster.md` and `wiki/survivors/full-roster.md` as compact reference pages instead of ~90 near-duplicate stub files — dedicated per-character pages still reserved for entries with real stats.
+
 ## 2026-08-21 (7)
 Pulled real perk/killer/survivor icon art from the Dead by Daylight Wiki (deadbydaylight.wiki.gg) — 8 perk icons, 6 killer portraits, 1 survivor portrait, downloaded into `docs/assets/icons/`. Added attribution footer note (© Behaviour Interactive, fan use). Continued killer roster research: added The Huntress, The Dark Lord, The Deathslinger, The Hillbilly (all real 2024 pick/kill-rate data from dev stats coverage) and The Hag (named least popular alongside Skull Merchant). 6 of 44 killers now seeded.
 

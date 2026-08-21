@@ -9,6 +9,7 @@ updated: 2026-08-21T00:00:00
 One page per killer. Update this list whenever a killer page is added.
 
 ## Pages
+- [[full-roster|Full Killer Roster (44)]] — all 44 have icons now; see this page for the complete list
 - [[the-huntress|The Huntress]] — #1 most popular late 2024 (5.7% pick, 54.22% kill)
 - [[the-dark-lord|The Dark Lord]] — #2 most popular late 2024 (5.81% pick, 58.19% kill)
 - [[the-deathslinger|The Deathslinger]] — #3 most popular early 2024
@@ -16,7 +17,7 @@ One page per killer. Update this list whenever a killer page is added.
 - [[skull-merchant|Skull Merchant]] — top kill rate, but also named least popular Nov 2024
 - [[the-hag|The Hag]] — least popular Nov 2024
 
-6 of 44 killers seeded. Most still need real data — this is the current gap, not perks/trivia/builds.
+All 44 killers have icons + a power blurb (see `docs/data/killers.json`). Only 6 have dedicated pages with real usage-rank data — that's still the gap, not the icons/roster itself.
 
 ## Frontmatter for killer pages
 ```yaml
