@@ -59,6 +59,25 @@ function getQueryParam(key) {
   return new URLSearchParams(window.location.search).get(key);
 }
 
+// Renders the top-4 perk icon strip. Each tile shows the perk icon (or a letter
+// fallback if no icon is known) and exposes name + effect as a native tooltip
+// (title attribute) on hover — no JS tooltip framework needed.
+function renderTopPerkIcons(perks, perkInfo) {
+  const top4 = perks.slice(0, 4);
+  const tiles = top4
+    .map((p) => {
+      const info = perkInfo[p.name];
+      const tooltip = info ? `${p.name} — ${info.effect}` : p.name;
+      const iconSrc = info && info.icon;
+      const inner = iconSrc
+        ? `<img src="${iconSrc}" alt="${p.name}" loading="lazy">`
+        : `<span class="perk-icon-fallback">${p.name.charAt(0)}</span>`;
+      return `<div class="perk-icon-tile" title="${tooltip.replace(/"/g, "&quot;")}">${inner}</div>`;
+    })
+    .join("");
+  return `<div class="perk-icon-strip">${tiles}</div>`;
+}
+
 // Renders a single-series horizontal bar chart: one bar per perk, length = usage_pct,
 // a small muted stat (kill/escape rate) shown beside the bar. No legend needed (one series).
 function renderPerkChart(perks, opts) {
@@ -119,14 +138,21 @@ async function loadDetailPage(opts) {
         ${rateValue != null ? `<div class="stat-tile"><span class="stat-tile-value">${rateValue}%</span><span class="stat-tile-label">${rateLabel}</span></div>` : ""}
       </div>
       ${entry.note ? `<p class="placeholder-note">${entry.note}</p>` : ""}
-      <h2 class="section-title">Most Used Perks</h2>
+      <h2 class="section-title">Top 4 Most Used Perks</h2>
+      <div id="perk-icons"><p class="text-muted">Loading…</p></div>
+      <h2 class="section-title">All Most Used Perks</h2>
       <div id="perk-chart"><p class="text-muted">Loading…</p></div>
       <p class="chart-caption">Not tracked by this source: hook counts / time-on-hook. Only pick rate, ${opts.side === "survivor" ? "escape" : "kill"} rate, and perk usage are available.</p>
     `;
 
+    const iconsEl = document.getElementById("perk-icons");
     const chartEl = document.getElementById("perk-chart");
     try {
-      const perkData = await loadData(`${opts.perksDir}/${slug}.json`);
+      const [perkData, perkInfo] = await Promise.all([
+        loadData(`${opts.perksDir}/${slug}.json`),
+        loadData("data/perk-info.json"),
+      ]);
+      iconsEl.innerHTML = renderTopPerkIcons(perkData.perks, perkInfo);
       chartEl.innerHTML = renderPerkChart(perkData.perks, { side: opts.side });
       const caption = document.querySelector(".chart-caption");
       if (caption && perkData.source) {
@@ -136,6 +162,7 @@ async function loadDetailPage(opts) {
         caption.after(note);
       }
     } catch {
+      iconsEl.innerHTML = "";
       chartEl.innerHTML = `<p class="placeholder-note">Detailed perk breakdown not yet ingested for this character.</p>`;
     }
   } catch (err) {

@@ -7,7 +7,7 @@ updated: 2026-08-21T00:00:00
 # Recent Context
 
 ## Last Updated
-2026-08-21. Killer/survivor cards are now clickable, leading to detail pages with real per-character perk-usage bar charts.
+2026-08-21. Detail pages now show a hoverable top-4 perk icon strip (name+effect tooltip) above the full bar chart.
 
 ## Key Recent Facts
 - **Live site**: https://dzottigit17.github.io/dbd-stats-wiki/ (repo `DzottiGit17/dbd-stats-wiki`, public, Pages from `docs/`).
@@ -18,6 +18,8 @@ updated: 2026-08-21T00:00:00
 - Roster/pick-kill-rate data (previous pass) is unchanged and still fully populated for all 44 killers / 53 survivors.
 
 ## Recent Changes
+- Added top-4 perk icon strip (hover tooltip = name + effect) above the bar chart on detail pages
+- Added `docs/data/perk-info.json` (name → icon + effect lookup), 23 new perk icons
 - Added `docs/killer-detail.html`, `docs/survivor-detail.html`
 - Added `loadDetailPage()`, `renderPerkChart()`, `slugify()` to `docs/js/app.js`
 - Added detail-page + chart CSS to `docs/css/style.css`

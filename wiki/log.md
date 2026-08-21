@@ -10,6 +10,9 @@ Append-only. New entries go at the TOP. Never edit past entries.
 
 ---
 
+## 2026-08-21 (11)
+Added a "Top 4 Most Used Perks" icon strip above the full bar chart on detail pages, per user request — 4 perk icons per character, native `title`-attribute tooltip on hover showing name + effect text. Downloaded 23 new perk icons from deadbydaylight.wiki.gg (confirmed the `IconPerks_camelCase.png` naming pattern, including `Hex:`→`hex` and `Scourge Hook:`→`scourgeHook` prefixes) to cover every perk appearing in a top-4 slot across the 12 killers + 9 survivors already seeded. Added `docs/data/perk-info.json` as a name→{icon, effect} lookup (effect text hand-written from known perk mechanics, not scraped — flagged as such). Falls back to a plain letter tile if a perk has no icon/info entry yet, rather than a broken image.
+
 ## 2026-08-21 (10)
 Added clickable killer/survivor detail pages per user request ("clickable to see most used perks stats with graphs"). Built `docs/killer-detail.html`/`survivor-detail.html` as shared templates keyed by `?n=<name>` query param, plus a vanilla-CSS single-series horizontal bar chart component in `app.js`/`style.css` (dataviz skill applied: one hue per side, no legend needed for single series, thin rounded bars, secondary stat as muted text rather than a second axis). Pulled real per-character perk-usage breakdowns via NightLight.gg (same browser-bypass method as the roster pull) for 12 killers and 9 survivors — the top ~10 by pick rate on each side, plus Skull Merchant/Hag/Claudette from earlier passes. Every killer/survivor card now links to its detail page; characters without a seeded perk file show an honest "not yet ingested" message instead of a broken/empty chart. Explicitly noted in the UI and CLAUDE.md that hook-count/time-on-hook data isn't available from this source — didn't fabricate it.
 
