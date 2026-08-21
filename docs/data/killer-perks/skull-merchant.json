@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 24.88, "kill_pct": 56.1 },
+    { "name": "Corrupt Intervention", "usage_pct": 19.25, "kill_pct": 58.75 },
+    { "name": "Surge", "usage_pct": 18.31, "kill_pct": 49.44 },
+    { "name": "THWACK!", "usage_pct": 13.62, "kill_pct": 47.37 },
+    { "name": "Rapid Brutality", "usage_pct": 12.68, "kill_pct": 48.15 },
+    { "name": "Leverage", "usage_pct": 11.74, "kill_pct": 50 },
+    { "name": "Brutal Strength", "usage_pct": 11.27, "kill_pct": 64.58 },
+    { "name": "Game Afoot", "usage_pct": 11.27, "kill_pct": 50 },
+    { "name": "Dissolution", "usage_pct": 11.27, "kill_pct": 50.85 },
+    { "name": "Turn Back The Clock", "usage_pct": 10.8, "kill_pct": 67.27 }
+  ]
+}

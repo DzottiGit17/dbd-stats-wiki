@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Hex: Ruin", "usage_pct": 33.03, "kill_pct": 50.92 },
+    { "name": "Hex: Devour Hope", "usage_pct": 24.31, "kill_pct": 42 },
+    { "name": "Corrupt Intervention", "usage_pct": 22.94, "kill_pct": 41.07 },
+    { "name": "Sloppy Butcher", "usage_pct": 22.48, "kill_pct": 48.18 },
+    { "name": "Surge", "usage_pct": 17.43, "kill_pct": 50 },
+    { "name": "Hex: The Third Seal", "usage_pct": 16.51, "kill_pct": 35.44 },
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 13.3, "kill_pct": 43.1 },
+    { "name": "Hex: No One Escapes Death", "usage_pct": 11.93, "kill_pct": 43.64 },
+    { "name": "Agitation", "usage_pct": 9.17, "kill_pct": 55.56 },
+    { "name": "Franklin's Demise", "usage_pct": 8.72, "kill_pct": 51.28 }
+  ]
+}

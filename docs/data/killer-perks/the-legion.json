@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Thanatophobia", "usage_pct": 29.53, "kill_pct": 46.06 },
+    { "name": "Bamboozle", "usage_pct": 23.21, "kill_pct": 48.91 },
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 19.63, "kill_pct": 51.68 },
+    { "name": "Enduring", "usage_pct": 18.39, "kill_pct": 46.74 },
+    { "name": "Discordance", "usage_pct": 17.55, "kill_pct": 40.54 },
+    { "name": "Surge", "usage_pct": 15.14, "kill_pct": 48.88 },
+    { "name": "Spirit Fury", "usage_pct": 14.89, "kill_pct": 50.26 },
+    { "name": "Hex: Ruin", "usage_pct": 12.56, "kill_pct": 53.03 },
+    { "name": "Pop Goes the Weasel", "usage_pct": 10.4, "kill_pct": 49.82 },
+    { "name": "Lightborn", "usage_pct": 8.07, "kill_pct": 50.72 }
+  ]
+}

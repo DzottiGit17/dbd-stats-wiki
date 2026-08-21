@@ -58,6 +58,16 @@ docs/
 
 Uses **Bootstrap 5.3** via CDN (`<link>`/`<script>` tags, no build step — still a plain static site). `css/style.css` loads after Bootstrap and overrides its CSS variables (`--bs-body-bg`, `--bs-primary`, `--bs-card-bg`, etc.) plus adds the site's own type scale and gradient/rank-number treatment. Layout uses Bootstrap's grid (`row row-cols-* g-3`) and `navbar`/`card` components — don't reintroduce the old hand-rolled `.grid`/custom-nav markup from before.
 
+### Killer/Survivor detail pages
+
+`killer-detail.html` and `survivor-detail.html` are single shared templates (not one file per character) — they read `?n=<Character Name>` from the URL, look up the matching entry in `docs/data/killers.json`/`survivors.json`, then try to fetch `docs/data/killer-perks/<slug>.json` or `survivor-perks/<slug>.json` (slug = `slugify(name)` in `app.js`) for a per-character "Most Used Perks" bar chart. Every card on `killers.html`/`survivors.html` links to these via `?n=`.
+
+If a character has no `<slug>.json` perk file yet, the detail page shows "Detailed perk breakdown not yet ingested for this character" instead of a chart — this is expected for most of the roster (only ~12 killers + ~9 survivors have deep perk data as of 2026-08-21; see `wiki/hot.md` for which ones).
+
+**Known data limitation**: NightLight.gg (the source) does not track hook count or time-on-hook per character — only pick rate, kill/escape rate, and perk/build usage rate. The detail page says this explicitly rather than inventing a hook-time stat. If a future source has real hook data, add it as a new stat tile, don't fabricate one now.
+
+To add perk-breakdown data for a new character: create `docs/data/{killer,survivor}-perks/<slug>.json` with `{ "source": "...", "perks": [{ "name", "usage_pct", "kill_pct" or "escape_pct" }, ...] }` (top ~10 perks is plenty for the chart).
+
 - The repo is **private** on GitHub (`DzottiGit17/dbd-stats-wiki` or similar) — only `docs/` is public-facing via Pages; `wiki/`, `.raw/`, and `CLAUDE.md` sit in the same private repo but aren't served.
 - Workflow: fill in `wiki/killers/`, `wiki/perks/`, etc. from real sources first → once a page has solid data, mirror it into the matching `docs/data/*.json` entry (drop the `placeholder` flag once real data is in) → commit → push → Pages redeploys automatically (usually <1 min).
 - Don't hand-edit `docs/data/*.json` with fake stats. If a number isn't sourced, leave it `null` and keep `"placeholder": true`.

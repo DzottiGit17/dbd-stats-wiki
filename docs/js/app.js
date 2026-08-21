@@ -44,3 +44,101 @@ async function loadAndRender(jsonPath, containerId, renderCardFn) {
     container.innerHTML = `<p class="text-muted">Couldn't load data: ${err.message}</p>`;
   }
 }
+
+// ---- shared detail-page helpers ----
+
+function slugify(name) {
+  return name
+    .toLowerCase()
+    .replace(/[''`]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
+
+function getQueryParam(key) {
+  return new URLSearchParams(window.location.search).get(key);
+}
+
+// Renders a single-series horizontal bar chart: one bar per perk, length = usage_pct,
+// a small muted stat (kill/escape rate) shown beside the bar. No legend needed (one series).
+function renderPerkChart(perks, opts) {
+  const accentVar = opts.side === "survivor" ? "var(--teal)" : "var(--red)";
+  const rateLabel = opts.side === "survivor" ? "escape" : "kill";
+  const maxUsage = Math.max(...perks.map((p) => p.usage_pct), 1);
+  const rows = perks
+    .map((p) => {
+      const rate = opts.side === "survivor" ? p.escape_pct : p.kill_pct;
+      const width = ((p.usage_pct / maxUsage) * 100).toFixed(1);
+      return `
+        <div class="chart-bar-row">
+          <div class="chart-bar-head">
+            <span class="chart-bar-name">${p.name}</span>
+            <span class="chart-bar-value">${p.usage_pct}%</span>
+          </div>
+          <div class="chart-bar-track">
+            <div class="chart-bar-fill" style="width:${width}%; background:${accentVar};"></div>
+          </div>
+          <span class="chart-bar-sub">${rate}% ${rateLabel} rate</span>
+        </div>`;
+    })
+    .join("");
+  return `<div class="chart-bar-list">${rows}</div>`;
+}
+
+async function loadDetailPage(opts) {
+  // opts: { listJson, perksDir, side: 'killer'|'survivor', backHref, backLabel }
+  const name = getQueryParam("n");
+  const root = document.getElementById("detail-root");
+  if (!name) {
+    root.innerHTML = `<p class="text-muted">No character specified. <a href="${opts.backHref}">${opts.backLabel}</a></p>`;
+    return;
+  }
+  try {
+    const list = await loadData(opts.listJson);
+    const entry = (list.items || []).find((i) => i.name === name);
+    if (!entry) {
+      root.innerHTML = `<p class="text-muted">"${name}" not found. <a href="${opts.backHref}">${opts.backLabel}</a></p>`;
+      return;
+    }
+    const slug = slugify(entry.name);
+    const rateLabel = opts.side === "survivor" ? "Escape Rate" : "Kill Rate";
+    const rateValue = opts.side === "survivor" ? entry.escape_rate_pct : entry.kill_rate_pct;
+
+    root.innerHTML = `
+      <a href="${opts.backHref}" class="back-link">&larr; ${opts.backLabel}</a>
+      <div class="detail-header">
+        ${entry.icon ? `<img class="detail-icon" src="${entry.icon}" alt="${entry.name} icon">` : ""}
+        <div>
+          <h1 class="detail-title">${entry.name}</h1>
+          <p class="detail-sub">${entry.power || ""}</p>
+        </div>
+      </div>
+      <div class="stat-tiles">
+        ${entry.usage_rank ? `<div class="stat-tile"><span class="stat-tile-value">#${entry.usage_rank}</span><span class="stat-tile-label">Pick rank</span></div>` : ""}
+        ${entry.usage_rate_pct != null ? `<div class="stat-tile"><span class="stat-tile-value">${entry.usage_rate_pct}%</span><span class="stat-tile-label">Pick rate</span></div>` : ""}
+        ${rateValue != null ? `<div class="stat-tile"><span class="stat-tile-value">${rateValue}%</span><span class="stat-tile-label">${rateLabel}</span></div>` : ""}
+      </div>
+      ${entry.note ? `<p class="placeholder-note">${entry.note}</p>` : ""}
+      <h2 class="section-title">Most Used Perks</h2>
+      <div id="perk-chart"><p class="text-muted">Loading…</p></div>
+      <p class="chart-caption">Not tracked by this source: hook counts / time-on-hook. Only pick rate, ${opts.side === "survivor" ? "escape" : "kill"} rate, and perk usage are available.</p>
+    `;
+
+    const chartEl = document.getElementById("perk-chart");
+    try {
+      const perkData = await loadData(`${opts.perksDir}/${slug}.json`);
+      chartEl.innerHTML = renderPerkChart(perkData.perks, { side: opts.side });
+      const caption = document.querySelector(".chart-caption");
+      if (caption && perkData.source) {
+        const note = document.createElement("p");
+        note.className = "chart-caption";
+        note.textContent = `Source: ${perkData.source}`;
+        caption.after(note);
+      }
+    } catch {
+      chartEl.innerHTML = `<p class="placeholder-note">Detailed perk breakdown not yet ingested for this character.</p>`;
+    }
+  } catch (err) {
+    root.innerHTML = `<p class="text-muted">Couldn't load data: ${err.message}</p>`;
+  }
+}

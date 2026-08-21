@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Nowhere to Hide", "usage_pct": 44.67, "kill_pct": 51.68 },
+    { "name": "Lethal Pursuer", "usage_pct": 40.8, "kill_pct": 49.57 },
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 36.06, "kill_pct": 57.28 },
+    { "name": "Pop Goes the Weasel", "usage_pct": 23.14, "kill_pct": 51.16 },
+    { "name": "A Nurse's Calling", "usage_pct": 23.04, "kill_pct": 46.97 },
+    { "name": "Barbecue & Chili", "usage_pct": 22.28, "kill_pct": 49.33 },
+    { "name": "Eruption", "usage_pct": 14.1, "kill_pct": 55.12 },
+    { "name": "I'm All Ears", "usage_pct": 10.12, "kill_pct": 48.65 },
+    { "name": "Dead Man's Switch", "usage_pct": 9.36, "kill_pct": 51.37 },
+    { "name": "Predator", "usage_pct": 8.29, "kill_pct": 57.06 }
+  ]
+}
