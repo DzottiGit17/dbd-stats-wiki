@@ -1,0 +1,33 @@
+<title>Survivors — DBD Stats & Builds</title>
+<link rel="stylesheet" href="css/style.css">
+
+<header>
+  <h1>DBD Stats & Builds</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="killers.html">Killers</a>
+    <a href="survivors.html" class="active">Survivors</a>
+    <a href="perks.html">Perks</a>
+    <a href="builds.html">Builds</a>
+    <a href="trivia.html">Trivia</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Survivors — Usage & Death Rankings</h2>
+  <div class="grid" id="survivors-grid"></div>
+</main>
+
+<footer>Data is community/manually sourced — see confidence notes on trivia pages.</footer>
+
+<script src="js/app.js"></script>
+<script>
+  loadAndRender("data/survivors.json", "survivors-grid", (s) => el(`
+    <div class="card survivor">
+      ${s.usage_rank ? `<span class="rank">#${s.usage_rank} used</span>` : ""}
+      <h3>${s.name}</h3>
+      ${s.death_rank ? `<p>Death rank: #${s.death_rank}</p>` : ""}
+      ${(s.common_perks_used || []).map(p => `<span class="tag">${p}</span>`).join("")}
+    </div>
+  `));
+</script>

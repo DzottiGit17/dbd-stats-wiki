@@ -1,0 +1,33 @@
+<title>Perks — DBD Stats & Builds</title>
+<link rel="stylesheet" href="css/style.css">
+
+<header>
+  <h1>DBD Stats & Builds</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="killers.html">Killers</a>
+    <a href="survivors.html">Survivors</a>
+    <a href="perks.html" class="active">Perks</a>
+    <a href="builds.html">Builds</a>
+    <a href="trivia.html">Trivia</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Perks — Most Used, Killer & Survivor</h2>
+  <div class="grid" id="perks-grid"></div>
+</main>
+
+<footer>Data is community/manually sourced — see confidence notes on trivia pages.</footer>
+
+<script src="js/app.js"></script>
+<script>
+  loadAndRender("data/perks.json", "perks-grid", (p) => el(`
+    <div class="card${p.side === "survivor" ? " survivor" : ""}">
+      ${p.usage_rank ? `<span class="rank">#${p.usage_rank} ${p.side}</span>` : ""}
+      <h3>${p.name}</h3>
+      <p>${p.effect || ""}</p>
+      <span class="tag">${p.origin_character || "general"}</span>
+    </div>
+  `));
+</script>

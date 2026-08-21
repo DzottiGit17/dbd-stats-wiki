@@ -1,0 +1,107 @@
+:root {
+  --bg: #0f0f13;
+  --bg-card: #1a1a20;
+  --text: #e8e6e3;
+  --text-dim: #9a9aa2;
+  --accent: #d9432e;   /* DBD red */
+  --accent-2: #4fc1ff; /* survivor blue */
+  --border: #2a2a32;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+header {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+nav a {
+  color: var(--text-dim, #9a9aa2);
+  text-decoration: none;
+  margin-left: 1rem;
+  font-size: 0.95rem;
+}
+
+nav a:hover, nav a.active {
+  color: var(--text);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+}
+
+.card .rank {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.card.survivor .rank { background: var(--accent-2); color: #05131a; }
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  background: var(--border);
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  margin: 0.15rem 0.15rem 0 0;
+}
+
+.placeholder-note {
+  background: #2a1e12;
+  border: 1px solid #4a3520;
+  color: #e8c88f;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.85rem;
+  padding: 2rem 1rem;
+}

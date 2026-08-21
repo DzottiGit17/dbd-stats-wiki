@@ -1,0 +1,7 @@
+{
+  "placeholder": true,
+  "items": [
+    { "name": "The Trapper", "power": "Bear Traps", "usage_rank": null, "common_perks_used": ["Franklin's Demise"] },
+    { "name": "The Nurse", "power": "Blink", "usage_rank": null, "common_perks_used": [] }
+  ]
+}

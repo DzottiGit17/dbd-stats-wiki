@@ -1,0 +1,33 @@
+<title>Builds — DBD Stats & Builds</title>
+<link rel="stylesheet" href="css/style.css">
+
+<header>
+  <h1>DBD Stats & Builds</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="killers.html">Killers</a>
+    <a href="survivors.html">Survivors</a>
+    <a href="perks.html">Perks</a>
+    <a href="builds.html" class="active">Builds</a>
+    <a href="trivia.html">Trivia</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Builds — Best Combos & Fun Loadouts</h2>
+  <div class="grid" id="builds-grid"></div>
+</main>
+
+<footer>Data is community/manually sourced — see confidence notes on trivia pages.</footer>
+
+<script src="js/app.js"></script>
+<script>
+  loadAndRender("data/builds.json", "builds-grid", (b) => el(`
+    <div class="card${b.side === "survivor" ? " survivor" : ""}">
+      <span class="rank">${b.category}</span>
+      <h3>${b.name}</h3>
+      <p>${b.why_it_works || ""}</p>
+      ${(b.perks || []).map(p => `<span class="tag">${p}</span>`).join("")}
+    </div>
+  `));
+</script>

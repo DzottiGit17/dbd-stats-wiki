@@ -1,0 +1,7 @@
+{
+  "placeholder": true,
+  "items": [
+    { "name": "Barbecue & Chilli", "side": "killer", "origin_character": "The Cannibal", "effect": "See aura of survivors far from hooked survivor after hooking.", "usage_rank": null },
+    { "name": "Decisive Strike", "side": "survivor", "origin_character": "Laurie Strode", "effect": "Stun the killer if grabbed/picked up shortly after unhooking.", "usage_rank": null }
+  ]
+}
