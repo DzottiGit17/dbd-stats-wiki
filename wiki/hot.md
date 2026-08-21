@@ -7,16 +7,21 @@ updated: 2026-08-21T00:00:00
 # Recent Context
 
 ## Last Updated
-2026-08-21. Vault just scaffolded for a Dead by Daylight stats/trivia website project.
+2026-08-21. Site is live and has gone through 3 design iterations; Bootstrap 5 adopted for structure. Still no real DBD data ingested — everything on the live site is placeholder.
 
 ## Key Recent Facts
-- Vault purpose: build content for a DBD website covering most-used killers/survivors, most-used perks per character, trivia (most-killed survivor, etc.), best perk combos, and fun builds.
-- No data ingested yet — need usage stats, perk data, and trivia sources.
+- **Live site**: https://dzottigit17.github.io/dbd-stats-wiki/ — repo `DzottiGit17/dbd-stats-wiki` (public, GitHub Pages serving from `docs/` on `master`).
+- Site is a **plain static HTML/CSS/JS build, no build step** — Bootstrap 5.3 loaded via CDN `<link>`/`<script>` tags, no npm/bundler.
+- Final design direction: clean dark data-dashboard — Space Grotesk/Inter/IBM Plex Mono type, red (killer) / teal (survivor) gradient accents, glass sticky navbar, floating cards with hover glow. (Rejected an earlier gothic/case-file "Trial Report" theme — user didn't like it.)
+- `docs/css/style.css` overrides Bootstrap's CSS variables (`--bs-primary`, `--bs-card-bg`, etc.) to keep the custom skin rather than default Bootstrap look — see `CLAUDE.md` for the full convention.
+- Wiki content (`wiki/killers/`, `wiki/perks/`, etc.) is still empty — the site's `docs/data/*.json` files only have placeholder/example entries.
 
 ## Recent Changes
-- Created: full folder structure (killers/, survivors/, perks/, builds/, trivia/, site/, meta/)
-- Created: index.md, log.md, hot.md, overview.md, CLAUDE.md, _templates/
+- Created: `docs/` site scaffold (6 pages, Bootstrap navbar/grid/cards, JSON data files)
+- Created: GitHub repo, enabled GitHub Pages
+- Updated: `docs/css/style.css`, all `docs/*.html`, `docs/js/app.js` — 3x through design iteration, most recently to Bootstrap 5
+- Updated: `CLAUDE.md` with the website/Bootstrap conventions section
 
 ## Active Threads
-- Open question: where will usage-rate stats and "most killed survivor" data come from? (BHVR dev updates, Nightlight/DBD stats trackers, community surveys, or manual entry?)
-- Next step: ingest first source (patch notes, stats site export, or a list of killers/survivors/perks to seed) to start filling killers/, survivors/, perks/.
+- No real DBD stats/perk/build/trivia data ingested yet — next real step is feeding actual sources (patch notes, a stats tracker export, or manually-entered killer/survivor/perk lists) into `wiki/` and mirroring into `docs/data/*.json`.
+- Open question: where will usage-rate and "most killed survivor" data come from? (BHVR dev updates, Nightlight/community stats trackers, or manual entry?)

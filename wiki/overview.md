@@ -27,4 +27,4 @@ This vault is the knowledge base behind a **Dead by Daylight stats & trivia webs
 | `wiki/site/` | Drafts/outlines of actual website pages, pulling from the above |
 
 ## Status
-Freshly scaffolded, 2026-08-21. No sources ingested yet. See [[hot|Hot Cache]] for the latest state and open threads.
+Site is **live**: https://dzottigit17.github.io/dbd-stats-wiki/ (repo `DzottiGit17/dbd-stats-wiki`). Design finalized after a few iterations — clean dark dashboard theme built on Bootstrap 5. No real killer/survivor/perk/build/trivia data ingested yet — everything on the live site is placeholder. See [[hot|Hot Cache]] for the latest state and open threads, and [[site/_index|Site Content Index]] for the website specifics.
