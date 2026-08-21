@@ -9,7 +9,10 @@ updated: 2026-08-21T00:00:00
 Standalone stat/fact pages — the "did you know" content for the site.
 
 ## Pages
-*(none yet)*
+- [[jolt-was-surge|Jolt Used to Be Called Surge]] — community-sourced
+- [[average-kill-rate|Killers Eliminate ~58.5% of Survivors on Average]] — official
+- [[most-played-survivors|Most Played Survivors: Claudette, Meg, Feng Min]] — official
+- [[deadliest-killers-kill-rate|Deadliest Killers by Kill Rate]] — community-sourced
 
 ## Frontmatter for trivia pages
 ```yaml

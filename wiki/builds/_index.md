@@ -9,7 +9,7 @@ updated: 2026-08-21T00:00:00
 Named perk combos — both proven meta builds and fun/meme builds.
 
 ## Pages
-*(none yet)*
+- [[gen-rush-squad|Gen Rush Squad]] — survivor meta build, assembled from confirmed top-10 pick-rate perks
 
 ## Frontmatter for build pages
 ```yaml

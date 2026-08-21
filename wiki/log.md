@@ -10,6 +10,9 @@ Append-only. New entries go at the TOP. Never edit past entries.
 
 ---
 
+## 2026-08-21 (6)
+First real data ingest. Researched via web search: BHVR's official most-used-perk stats (7.1.0 patch window, Apr–Aug 2023), average kill rate (~58.5%, Feb 2024 dev update), most-played survivors (Claudette #1, official), and community kill-rate leaderboard (Skull Merchant/Plague/Sadako, NightLight.gg). Created 4 trivia pages, 8 perk pages (4 killer + 4 survivor of the top-10/top-10 lists), 1 killer page (Skull Merchant), 1 survivor page (Claudette Morel), 1 build (Gen Rush Squad). Mirrored full top-10/top-10 perk list + trivia + build into `docs/data/*.json`, dropped `placeholder` flag on perks/trivia/builds (killers/survivors JSON still marked with a "note" — only 1 real entry each so far, most characters still need data).
+
 ## 2026-08-21 (5)
 Site design pass 3: adopted Bootstrap 5.3 (via CDN, no build step) for navbar/grid/card structure. `docs/css/style.css` now overrides Bootstrap's CSS variables to keep the red/teal DBD skin instead of default Bootstrap look. Mobile nav now has a proper collapsing hamburger menu. `docs/js/app.js` updated to render Bootstrap `col`/`card` markup.
 

@@ -9,7 +9,9 @@ updated: 2026-08-21T00:00:00
 One page per survivor. Update this list whenever a survivor page is added.
 
 ## Pages
-*(none yet — ingest survivor data to populate)*
+- [[claudette-morel|Claudette Morel]] — #1 most-played survivor (official, BHVR stats reveal)
+
+Most survivors still need real data.
 
 ## Frontmatter for survivor pages
 ```yaml

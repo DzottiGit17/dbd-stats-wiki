@@ -1,7 +1,7 @@
 {
-  "placeholder": true,
+  "placeholder": false,
+  "note": "Only a couple of entries seeded so far — most survivors still need real usage data.",
   "items": [
-    { "name": "Dwight Fairfield", "usage_rank": null, "death_rank": null, "common_perks_used": [] },
-    { "name": "Meg Thomas", "usage_rank": null, "death_rank": null, "common_perks_used": [] }
+    { "name": "Claudette Morel", "usage_rank": 1, "death_rank": null, "common_perks_used": ["Self-Care", "Windows of Opportunity"] }
   ]
 }

@@ -1,6 +1,9 @@
 {
-  "placeholder": true,
+  "placeholder": false,
   "items": [
-    { "title": "Most Killed Survivor", "category": "records", "stat_value": "TBD — needs a real source", "confidence": "unverified" }
+    { "title": "Jolt Used to Be Called Surge", "category": "perk history", "stat_value": "Jolt began as Surge, The Demogorgon's unique perk — renamed and made general when the Stranger Things license lapsed.", "confidence": "community-sourced" },
+    { "title": "Average Kill Rate: ~58.5%", "category": "balance stats", "stat_value": "Killers eliminate about 58.5% of survivors on average, per a BHVR developer update (data through Feb 2024).", "confidence": "official" },
+    { "title": "Most Played Survivor: Claudette Morel", "category": "pick rate", "stat_value": "Claudette Morel is the most-played survivor, followed by Meg Thomas and Feng Min, per a BHVR stats reveal.", "confidence": "official" },
+    { "title": "Deadliest Killers by Kill Rate", "category": "balance stats", "stat_value": "Skull Merchant, The Plague, and Sadako top the kill-rate leaderboard per community-tracked match data (NightLight.gg).", "confidence": "community-sourced" }
   ]
 }

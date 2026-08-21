@@ -1,6 +1,6 @@
 {
-  "placeholder": true,
+  "placeholder": false,
   "items": [
-    { "name": "Gen Rush Squad", "side": "survivor", "category": "meta", "perks": ["Prove Thyself", "Hyperfocus"], "why_it_works": "Placeholder — fill in once real builds are ingested." }
+    { "name": "Gen Rush Squad", "side": "survivor", "category": "meta", "perks": ["Prove Thyself", "Windows of Opportunity", "Bond", "Adrenaline"], "why_it_works": "Built entirely from the game's most-used survivor perks: co-op gens fast, win chases when they happen, coordinate without comms, and cash in Adrenaline at the endgame." }
   ]
 }

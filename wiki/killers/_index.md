@@ -9,7 +9,9 @@ updated: 2026-08-21T00:00:00
 One page per killer. Update this list whenever a killer page is added.
 
 ## Pages
-*(none yet — ingest killer data to populate)*
+- [[skull-merchant|Skull Merchant]] — top kill rate per community stats (unofficial)
+
+Most killers still need real data — this is the current gap, not perks/trivia/builds.
 
 ## Frontmatter for killer pages
 ```yaml

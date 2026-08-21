@@ -1,7 +1,26 @@
 {
-  "placeholder": true,
+  "placeholder": false,
+  "source": "BHVR developer stats update, patch 7.1.0 window (27 Apr – 5 Aug 2023)",
   "items": [
-    { "name": "Barbecue & Chilli", "side": "killer", "origin_character": "The Cannibal", "effect": "See aura of survivors far from hooked survivor after hooking.", "usage_rank": null },
-    { "name": "Decisive Strike", "side": "survivor", "origin_character": "Laurie Strode", "effect": "Stun the killer if grabbed/picked up shortly after unhooking.", "usage_rank": null }
+    { "name": "Jolt", "side": "killer", "origin_character": "general (formerly Surge, The Demogorgon)", "effect": "Downing a survivor regresses all generators within 32m.", "usage_rank": 1, "usage_rate_pct": 22 },
+    { "name": "Sloppy Butcher", "side": "killer", "origin_character": "general", "effect": "Injured survivors suffer Hemorrhage and Mangled.", "usage_rank": 2, "usage_rate_pct": 18 },
+    { "name": "Scourge Hook: Pain Resonance", "side": "killer", "origin_character": "The Dredge", "effect": "Hooking on a Scourge Hook damages the farthest generator and blocks it.", "usage_rank": 3, "usage_rate_pct": 16 },
+    { "name": "Pop Goes the Weasel", "side": "killer", "origin_character": "general", "effect": "Kicking a generator after hooking someone gives a big instant regression.", "usage_rank": 4, "usage_rate_pct": 15 },
+    { "name": "Barbecue & Chilli", "side": "killer", "origin_character": "The Cannibal", "effect": "See distant survivor auras after hooking.", "usage_rank": 5, "usage_rate_pct": 14 },
+    { "name": "Lethal Pursuer", "side": "killer", "origin_character": "general", "effect": "See all survivor auras for extra seconds at match start.", "usage_rank": 6, "usage_rate_pct": 14 },
+    { "name": "Corrupt Intervention", "side": "killer", "origin_character": "general", "effect": "Blocks the 3 farthest generators at match start.", "usage_rank": 7, "usage_rate_pct": 12 },
+    { "name": "Nowhere to Hide", "side": "killer", "origin_character": "general", "effect": "Kicking a generator reveals nearby survivor auras.", "usage_rank": 8, "usage_rate_pct": 12 },
+    { "name": "Save the Best for Last", "side": "killer", "origin_character": "The Wraith", "effect": "Faster attack cooldown against survivors who aren't your obsession.", "usage_rank": 9, "usage_rate_pct": 11 },
+    { "name": "Hex: No One Escapes Death", "side": "killer", "origin_character": "general", "effect": "After the last generator, survivors get Exposed and the killer moves faster.", "usage_rank": 10, "usage_rate_pct": 11 },
+    { "name": "Windows of Opportunity", "side": "survivor", "origin_character": "Kate Denson", "effect": "Permanently see nearby pallet and breakable wall auras.", "usage_rank": 1, "usage_rate_pct": 29 },
+    { "name": "Adrenaline", "side": "survivor", "origin_character": "Meg Thomas", "effect": "Instant heal + Haste burst when the exit gates power.", "usage_rank": 2, "usage_rate_pct": 22 },
+    { "name": "Resilience", "side": "survivor", "origin_character": "general", "effect": "Action speed bonus while injured.", "usage_rank": 3, "usage_rate_pct": 19 },
+    { "name": "Lithe", "side": "survivor", "origin_character": "Feng Min", "effect": "Haste burst after a fast vault.", "usage_rank": 4, "usage_rate_pct": 17 },
+    { "name": "Self-Care", "side": "survivor", "origin_character": "Claudette Morel", "effect": "Heal yourself without a med-kit, slower than being healed by someone else.", "usage_rank": 5, "usage_rate_pct": 13 },
+    { "name": "Sprint Burst", "side": "survivor", "origin_character": "Meg Thomas", "effect": "Burst of speed when you start running from full stamina.", "usage_rank": 6, "usage_rate_pct": 13 },
+    { "name": "Prove Thyself", "side": "survivor", "origin_character": "general", "effect": "Repair speed bonus for survivors co-oping the same generator.", "usage_rank": 7, "usage_rate_pct": 11 },
+    { "name": "Dead Hard", "side": "survivor", "origin_character": "David King", "effect": "Dash forward to dodge a hit while exhausted-immune for a moment.", "usage_rank": 8, "usage_rate_pct": 10 },
+    { "name": "Bond", "side": "survivor", "origin_character": "Dwight Fairfield", "effect": "See nearby survivor auras at all times.", "usage_rank": 9, "usage_rate_pct": 9 },
+    { "name": "Spine Chill", "side": "survivor", "origin_character": "Kate Denson", "effect": "Warns you when the killer is looking in your direction nearby.", "usage_rank": 10, "usage_rate_pct": 6 }
   ]
 }
