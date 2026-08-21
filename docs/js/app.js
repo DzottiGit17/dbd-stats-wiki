@@ -37,12 +37,51 @@ async function loadAndRender(jsonPath, containerId, renderCardFn) {
     items.forEach((item) => {
       const col = document.createElement("div");
       col.className = "col";
+      // searchable text: name/title, plus any tag-worthy fields, lowercased
+      col.dataset.search = [item.name, item.title, item.power, item.effect, item.category]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
       col.appendChild(renderCardFn(item));
       container.appendChild(col);
     });
   } catch (err) {
     container.innerHTML = `<p class="text-muted">Couldn't load data: ${err.message}</p>`;
   }
+}
+
+// ---- dynamic search ----
+// Wires an <input> to live-filter a rendered grid's .col children by the
+// col.dataset.search text set in loadAndRender. Shows an empty-state message
+// when nothing matches instead of just leaving a blank grid.
+function initSearch(inputId, gridId) {
+  const input = document.getElementById(inputId);
+  const grid = document.getElementById(gridId);
+  if (!input || !grid) return;
+
+  let emptyMsg = null;
+
+  input.addEventListener("input", () => {
+    const q = input.value.trim().toLowerCase();
+    let visibleCount = 0;
+    grid.querySelectorAll(":scope > .col").forEach((col) => {
+      const match = !q || (col.dataset.search || "").includes(q);
+      col.style.display = match ? "" : "none";
+      if (match) visibleCount++;
+    });
+
+    if (visibleCount === 0 && grid.children.length > 0) {
+      if (!emptyMsg) {
+        emptyMsg = document.createElement("p");
+        emptyMsg.className = "text-muted search-empty";
+        grid.after(emptyMsg);
+      }
+      emptyMsg.textContent = `No results for "${input.value.trim()}".`;
+      emptyMsg.style.display = "";
+    } else if (emptyMsg) {
+      emptyMsg.style.display = "none";
+    }
+  });
 }
 
 // ---- shared detail-page helpers ----

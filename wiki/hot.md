@@ -7,7 +7,7 @@ updated: 2026-08-21T00:00:00
 # Recent Context
 
 ## Last Updated
-2026-08-21. Detail pages now show a hoverable top-4 perk icon strip (name+effect tooltip) above the full bar chart.
+2026-08-21. Fixed the perk bar-chart scaling bug (bars now show real percentages), added live search to killers/survivors/perks pages, and confirmed no public "most prestiged character" data exists anywhere.
 
 ## Key Recent Facts
 - **Live site**: https://dzottigit17.github.io/dbd-stats-wiki/ (repo `DzottiGit17/dbd-stats-wiki`, public, Pages from `docs/`).

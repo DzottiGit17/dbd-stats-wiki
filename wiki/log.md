@@ -10,6 +10,9 @@ Append-only. New entries go at the TOP. Never edit past entries.
 
 ---
 
+## 2026-08-21 (12)
+Fixed a real bug: the perk-usage bar chart on detail pages was rescaling each bar relative to that character's own top perk, so the #1 perk always showed a full-width bar regardless of its actual percentage — didn't match the printed number. Now bar width = the real 0-100 percentage. Also added a dynamic search box (`initSearch()` in app.js) to killers.html, survivors.html, and perks.html — live-filters the grid as you type, matching against name/power/effect/category text, with a "no results" empty state. Answered a user question honestly: no public aggregate "most prestiged character" data exists anywhere I could find (NightLight and BHVR's official tracker only expose personal/per-account prestige, not a community leaderboard) — didn't fabricate a stat for it.
+
 ## 2026-08-21 (11)
 Added a "Top 4 Most Used Perks" icon strip above the full bar chart on detail pages, per user request — 4 perk icons per character, native `title`-attribute tooltip on hover showing name + effect text. Downloaded 23 new perk icons from deadbydaylight.wiki.gg (confirmed the `IconPerks_camelCase.png` naming pattern, including `Hex:`→`hex` and `Scourge Hook:`→`scourgeHook` prefixes) to cover every perk appearing in a top-4 slot across the 12 killers + 9 survivors already seeded. Added `docs/data/perk-info.json` as a name→{icon, effect} lookup (effect text hand-written from known perk mechanics, not scraped — flagged as such). Falls back to a plain letter tile if a perk has no icon/info entry yet, rather than a broken image.
 

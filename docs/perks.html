@@ -23,6 +23,7 @@
 
 <main class="container py-5">
   <h2 class="page-title">Perks — Most Used, Killer & Survivor</h2>
+  <div class="search-box"><input type="search" id="perk-search" placeholder="Search perks…" aria-label="Search perks"></div>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-2" id="perks-grid"></div>
 </main>
 
@@ -39,5 +40,5 @@
       <p class="card-text">${p.effect || ""}</p>
       <span class="tag">${p.origin_character || "general"}</span>
     </div></div>
-  `));
+  `)).then(() => initSearch("perk-search", "perks-grid"));
 </script>

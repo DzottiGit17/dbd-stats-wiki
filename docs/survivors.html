@@ -23,6 +23,7 @@
 
 <main class="container py-5">
   <h2 class="page-title">Survivors — Usage & Death Rankings</h2>
+  <div class="search-box"><input type="search" id="survivor-search" placeholder="Search survivors…" aria-label="Search survivors"></div>
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-2" id="survivors-grid"></div>
 </main>
 
@@ -43,5 +44,5 @@
       ${(s.common_perks_used || []).map(p => `<span class="tag">${p}</span>`).join("")}
     </div></div>
     </a>
-  `));
+  `)).then(() => initSearch("survivor-search", "survivors-grid"));
 </script>

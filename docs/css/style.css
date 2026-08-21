@@ -116,6 +116,59 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--red); outline-o
 
 .hero p { color: var(--muted); font-size: 1.1rem; max-width: 56ch; }
 
+/* ---- search box ---- */
+.search-box {
+  position: relative;
+  max-width: 360px;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.search-box input {
+  width: 100%;
+  background: var(--bs-card-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 10px;
+  color: var(--bs-body-color);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.6rem 0.9rem 0.6rem 2.4rem;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(224, 41, 60, 0.15);
+}
+
+.search-box input::placeholder { color: var(--muted); }
+
+.search-box::before {
+  content: "";
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--muted);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.search-box::after {
+  content: "";
+  position: absolute;
+  left: 1.65rem;
+  top: 63%;
+  width: 7px;
+  height: 2px;
+  background: var(--muted);
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.search-empty { margin-top: 1.5rem; }
+
 main h2:not(.hero h2) {
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
