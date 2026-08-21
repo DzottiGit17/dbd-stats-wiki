@@ -10,6 +10,9 @@ Append-only. New entries go at the TOP. Never edit past entries.
 
 ---
 
+## 2026-08-21 (7)
+Pulled real perk/killer/survivor icon art from the Dead by Daylight Wiki (deadbydaylight.wiki.gg) — 8 perk icons, 6 killer portraits, 1 survivor portrait, downloaded into `docs/assets/icons/`. Added attribution footer note (© Behaviour Interactive, fan use). Continued killer roster research: added The Huntress, The Dark Lord, The Deathslinger, The Hillbilly (all real 2024 pick/kill-rate data from dev stats coverage) and The Hag (named least popular alongside Skull Merchant). 6 of 44 killers now seeded.
+
 ## 2026-08-21 (6)
 First real data ingest. Researched via web search: BHVR's official most-used-perk stats (7.1.0 patch window, Apr–Aug 2023), average kill rate (~58.5%, Feb 2024 dev update), most-played survivors (Claudette #1, official), and community kill-rate leaderboard (Skull Merchant/Plague/Sadako, NightLight.gg). Created 4 trivia pages, 8 perk pages (4 killer + 4 survivor of the top-10/top-10 lists), 1 killer page (Skull Merchant), 1 survivor page (Claudette Morel), 1 build (Gen Rush Squad). Mirrored full top-10/top-10 perk list + trivia + build into `docs/data/*.json`, dropped `placeholder` flag on perks/trivia/builds (killers/survivors JSON still marked with a "note" — only 1 real entry each so far, most characters still need data).
 

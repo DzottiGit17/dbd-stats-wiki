@@ -1,7 +1,12 @@
 {
   "placeholder": false,
-  "note": "Only a couple of entries seeded so far — most killers still need real usage data.",
+  "note": "6 of 44 killers seeded with real pick/kill-rate data so far — most still need entries.",
   "items": [
-    { "name": "Skull Merchant", "power": "Deploys tracking drones that scan and mark nearby survivors.", "usage_rank": null, "common_perks_used": [], "icon": "assets/icons/killers/skull-merchant.png" }
+    { "name": "The Huntress", "power": "Throws hatchets that down survivors from range.", "usage_rank": 1, "usage_rate_pct": 5.7, "common_perks_used": [], "icon": "assets/icons/killers/huntress.png" },
+    { "name": "The Dark Lord", "power": "Vampiric Castlevania crossover killer — bat dash and gargoyle transformation.", "usage_rank": 2, "usage_rate_pct": 5.81, "common_perks_used": [], "icon": "assets/icons/killers/dark-lord.png" },
+    { "name": "The Deathslinger", "power": "Fires a harpoon that hooks and reels in a survivor.", "usage_rank": 3, "usage_rate_pct": null, "common_perks_used": [], "icon": "assets/icons/killers/deathslinger.png" },
+    { "name": "The Hillbilly", "power": "Chainsaw sprint attack that instantly downs on hit.", "usage_rank": null, "usage_rate_pct": 8, "common_perks_used": [], "icon": "assets/icons/killers/hillbilly.png" },
+    { "name": "Skull Merchant", "power": "Deploys tracking drones that scan and mark nearby survivors.", "usage_rank": null, "common_perks_used": [], "icon": "assets/icons/killers/skull-merchant.png" },
+    { "name": "The Hag", "power": "Plants invisible traps that teleport her to their location when triggered.", "usage_rank": null, "usage_rate_pct": null, "common_perks_used": [], "icon": "assets/icons/killers/hag.png" }
   ]
 }

@@ -9,9 +9,14 @@ updated: 2026-08-21T00:00:00
 One page per killer. Update this list whenever a killer page is added.
 
 ## Pages
-- [[skull-merchant|Skull Merchant]] — top kill rate per community stats (unofficial)
+- [[the-huntress|The Huntress]] — #1 most popular late 2024 (5.7% pick, 54.22% kill)
+- [[the-dark-lord|The Dark Lord]] — #2 most popular late 2024 (5.81% pick, 58.19% kill)
+- [[the-deathslinger|The Deathslinger]] — #3 most popular early 2024
+- [[the-hillbilly|The Hillbilly]] — #1 most popular early 2024 (8% pick, post-rework)
+- [[skull-merchant|Skull Merchant]] — top kill rate, but also named least popular Nov 2024
+- [[the-hag|The Hag]] — least popular Nov 2024
 
-Most killers still need real data — this is the current gap, not perks/trivia/builds.
+6 of 44 killers seeded. Most still need real data — this is the current gap, not perks/trivia/builds.
 
 ## Frontmatter for killer pages
 ```yaml
