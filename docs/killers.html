@@ -37,6 +37,8 @@
       ${k.usage_rank ? `<span class="rank">#${k.usage_rank}</span>` : ""}
       <h3 class="card-title">${k.name}</h3>
       <p class="card-text">${k.power || ""}</p>
+      ${k.usage_rate_pct != null ? `<span class="tag">${k.usage_rate_pct}% pick rate</span>` : ""}
+      ${k.kill_rate_pct != null ? `<span class="tag">${k.kill_rate_pct}% kill rate</span>` : ""}
       ${(k.common_perks_used || []).map(p => `<span class="tag">${p}</span>`).join("")}
     </div></div>
   `));

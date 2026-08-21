@@ -9,15 +9,10 @@ updated: 2026-08-21T00:00:00
 One page per killer. Update this list whenever a killer page is added.
 
 ## Pages
-- [[full-roster|Full Killer Roster (44)]] — all 44 have icons now; see this page for the complete list
-- [[the-huntress|The Huntress]] — #1 most popular late 2024 (5.7% pick, 54.22% kill)
-- [[the-dark-lord|The Dark Lord]] — #2 most popular late 2024 (5.81% pick, 58.19% kill)
-- [[the-deathslinger|The Deathslinger]] — #3 most popular early 2024
-- [[the-hillbilly|The Hillbilly]] — #1 most popular early 2024 (8% pick, post-rework)
-- [[skull-merchant|Skull Merchant]] — top kill rate, but also named least popular Nov 2024
-- [[the-hag|The Hag]] — least popular Nov 2024
+- [[full-roster|Full Killer Roster (44) — Real Pick/Kill Rate Data]] — all 44 now have real, current pick/kill-rate numbers (NightLight.gg, 28-day window)
+- [[the-huntress|The Huntress]], [[the-dark-lord|The Dark Lord]], [[the-deathslinger|The Deathslinger]], [[the-hillbilly|The Hillbilly]], [[skull-merchant|Skull Merchant]], [[the-hag|The Hag]] — earlier dedicated pages (2024 dev-update era data; slightly different window than the NightLight numbers, both kept for comparison)
 
-All 44 killers have icons + a power blurb (see `docs/data/killers.json`). Only 6 have dedicated pages with real usage-rank data — that's still the gap, not the icons/roster itself.
+`docs/data/killers.json` is now fully populated for all 44 — icon, power blurb, pick rate, and kill rate. No more nulls except sample-size caveats noted per entry (e.g. The Judgment, only 12 games).
 
 ## Frontmatter for killer pages
 ```yaml

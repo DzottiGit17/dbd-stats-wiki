@@ -36,7 +36,9 @@
       ${s.icon ? `<img class="entity-icon" src="${s.icon}" alt="${s.name} icon" loading="lazy">` : ""}
       ${s.usage_rank ? `<span class="rank">#${s.usage_rank}</span>` : ""}
       <h3 class="card-title">${s.name}</h3>
-      ${s.death_rank ? `<p class="card-text">Death rank: #${s.death_rank}</p>` : ""}
+      ${s.usage_rate_pct != null ? `<span class="tag">${s.usage_rate_pct}% pick rate</span>` : ""}
+      ${s.escape_rate_pct != null ? `<span class="tag">${s.escape_rate_pct}% escape rate</span>` : ""}
+      ${s.note ? `<p class="card-text">${s.note}</p>` : ""}
       ${(s.common_perks_used || []).map(p => `<span class="tag">${p}</span>`).join("")}
     </div></div>
   `));

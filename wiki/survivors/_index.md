@@ -9,10 +9,10 @@ updated: 2026-08-21T00:00:00
 One page per survivor. Update this list whenever a survivor page is added.
 
 ## Pages
-- [[full-roster|Full Survivor Roster (54)]] — 53/54 have icons now (The Troupe pending); see this page for the complete list
-- [[claudette-morel|Claudette Morel]] — #1 most-played survivor (official, BHVR stats reveal)
+- [[full-roster|Full Survivor Roster (53) — Real Pick/Escape Rate Data]] — 53/54 now have real, current pick/escape-rate numbers (NightLight.gg, 28-day window)
+- [[claudette-morel|Claudette Morel]] — cited as #1 most-played historically (BHVR stats reveal); ranks #12 in the current 28-day NightLight window — both numbers kept, see the roster page for why they differ
 
-All but 1 survivor (The Troupe, a paired-character entity) have icons + entries. Only Claudette has a dedicated page with real usage-rank data — that's the gap, not the roster/icons.
+`docs/data/survivors.json` is now fully populated for 53/54 (The Troupe, a paired-character entity, still skipped — different data shape).
 
 ## Frontmatter for survivor pages
 ```yaml

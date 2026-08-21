@@ -4,6 +4,9 @@
     { "title": "Jolt Used to Be Called Surge", "category": "perk history", "stat_value": "Jolt began as Surge, The Demogorgon's unique perk — renamed and made general when the Stranger Things license lapsed.", "confidence": "community-sourced" },
     { "title": "Average Kill Rate: ~58.5%", "category": "balance stats", "stat_value": "Killers eliminate about 58.5% of survivors on average, per a BHVR developer update (data through Feb 2024).", "confidence": "official" },
     { "title": "Most Played Survivor: Claudette Morel", "category": "pick rate", "stat_value": "Claudette Morel is the most-played survivor, followed by Meg Thomas and Feng Min, per a BHVR stats reveal.", "confidence": "official" },
-    { "title": "Deadliest Killers by Kill Rate", "category": "balance stats", "stat_value": "Skull Merchant, The Plague, and Sadako top the kill-rate leaderboard per community-tracked match data (NightLight.gg).", "confidence": "community-sourced" }
+    { "title": "Deadliest Killers by Kill Rate", "category": "balance stats", "stat_value": "Skull Merchant, The Plague, and Sadako top the kill-rate leaderboard per community-tracked match data (NightLight.gg).", "confidence": "community-sourced" },
+    { "title": "Highest Kill Rate: The Pig (56.59%)", "category": "balance stats", "stat_value": "In the current 28-day NightLight window, The Pig has the highest kill rate of any killer at 56.59%, despite a middling pick rate.", "confidence": "community-sourced" },
+    { "title": "Most Played Killer Right Now: The Slasher (8.24%)", "category": "pick rate", "stat_value": "The Slasher (Jason Voorhees) currently has the highest killer pick rate at 8.24% — new-chapter hype is a known factor in this kind of spike.", "confidence": "community-sourced" },
+    { "title": "Most Played Survivor Right Now: Sable Ward (5.96%)", "category": "pick rate", "stat_value": "In the current 28-day window, Sable Ward has the highest survivor pick rate at 5.96% — different from Claudette Morel's historically-cited #1 spot.", "confidence": "community-sourced" }
   ]
 }

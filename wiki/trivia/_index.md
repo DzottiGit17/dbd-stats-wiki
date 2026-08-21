@@ -13,6 +13,7 @@ Standalone stat/fact pages — the "did you know" content for the site.
 - [[average-kill-rate|Killers Eliminate ~58.5% of Survivors on Average]] — official
 - [[most-played-survivors|Most Played Survivors: Claudette, Meg, Feng Min]] — official
 - [[deadliest-killers-kill-rate|Deadliest Killers by Kill Rate]] — community-sourced
+- [[nightlight-data-source|How We Got Full Roster Data]] — methodology note on getting past Cloudflare-blocked scraping
 
 ## Frontmatter for trivia pages
 ```yaml

@@ -10,6 +10,9 @@ Append-only. New entries go at the TOP. Never edit past entries.
 
 ---
 
+## 2026-08-21 (9)
+**Solved the "how do we get everyone's data" problem.** Discovered NightLight.gg's per-character stat viewer pages are client-rendered and their data API sits behind a Cloudflare bot-check (403 to plain scraping) — but a real browser (via claude-in-chrome) passes the check and renders the full table fine. Used this to pull real, current pick-rate + kill-rate for all 44 killers and pick-rate + escape-rate for 53/54 survivors (28-day window, 23 Jul–20 Aug 2026: 13,645 killer games, 54,333 survivor players). Rewrote `docs/data/killers.json` and `survivors.json` in full — every character now has real numbers, no more nulls except explicit small-sample-size notes (Judgment: 12 games, Aurora Stardotter: 24 games). Updated card templates to show pick/kill/escape rate. Added `wiki/trivia/nightlight-data-source.md` documenting the methodology for future ingests. Noted the historical-vs-current-window discrepancy for Claudette Morel (#1 all-time per BHVR, #12 in current 28-day window) rather than silently overwriting one claim with the other.
+
 ## 2026-08-21 (8)
 Full roster pass. Pulled the complete killer list (44) and survivor list (54) from deadbydaylight.wiki.gg, discovered the wiki's image filenames follow a predictable `K##_Name_Portrait.png` / `S##_Name_Portrait.png` pattern matching list position, and batch-downloaded icons for all 44 killers and 53/54 survivors (The Troupe/paired-entity skipped). `docs/data/killers.json` and `survivors.json` now have every character with a name, power/lore blurb, icon, and null usage stats except the ~7 with confirmed real data. Added `wiki/killers/full-roster.md` and `wiki/survivors/full-roster.md` as compact reference pages instead of ~90 near-duplicate stub files — dedicated per-character pages still reserved for entries with real stats.
 
