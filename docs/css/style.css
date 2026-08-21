@@ -1,299 +1,194 @@
 /* ============================================================
-   DBD Stats & Builds — "Trial Report" theme
-   A case-file dossier on the Entity's realm: dried-blood red,
-   lantern amber, moonlit fog. Gothic display type for headers,
-   typewriter-serif body, mono for the numbers that matter.
+   DBD Stats & Builds — clean data-dashboard theme
+   Dark, sharp, numbers-first. No texture, no ornament —
+   the rank number IS the design.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap');
 
 :root {
-  --void: #0b0908;
-  --panel: #17120e;
-  --panel-2: #1e1712;
-  --blood: #6e1414;
-  --blood-bright: #9c1f1f;
-  --lantern: #d8b169;
-  --fog: #4c6b78;
-  --fog-bright: #6f95a3;
-  --parchment: #e7dcc3;
-  --ash: #8f8577;
-  --stitch: #3a322a;
+  --bg: #111214;
+  --panel: #1a1b1e;
+  --panel-hover: #1f2023;
+  --border: #2a2b2f;
+  --red: #e0293c;
+  --teal: #33c4c0;
+  --text: #f2f2f0;
+  --muted: #8a8d93;
 }
 
 * { box-sizing: border-box; }
 
-@media (prefers-reduced-motion: no-preference) {
-  .card, nav a, a { transition: transform 0.15s ease, border-color 0.15s ease, color 0.15s ease; }
-}
-
-html, body {
-  margin: 0;
-  min-height: 100%;
-}
+html, body { margin: 0; min-height: 100%; }
 
 body {
-  background:
-    radial-gradient(ellipse at 20% -10%, rgba(110, 20, 20, 0.14), transparent 45%),
-    radial-gradient(ellipse at 90% 10%, rgba(76, 107, 120, 0.10), transparent 40%),
-    var(--void);
-  background-attachment: fixed;
-  color: var(--parchment);
-  font-family: 'Crimson Text', Georgia, serif;
-  font-size: 1.08rem;
-  line-height: 1.6;
-  position: relative;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
 }
 
-/* film-grain overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1000;
-  opacity: 0.05;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
+a { color: var(--red); text-decoration: none; }
+a:hover { color: var(--text); }
 
-a { color: var(--lantern); }
-a:hover { color: var(--fog-bright); }
+::selection { background: var(--red); color: var(--bg); }
 
-::selection { background: var(--blood); color: var(--parchment); }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 
-:focus-visible {
-  outline: 2px solid var(--lantern);
-  outline-offset: 2px;
+@media (prefers-reduced-motion: no-preference) {
+  .card, nav a { transition: border-color 0.15s ease, background 0.15s ease; }
 }
 
 header {
-  padding: 2rem 1.5rem 1.25rem;
-  border-bottom: 1px solid var(--stitch);
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem 2rem;
-  position: relative;
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  bottom: -1px; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--blood) 20%, var(--lantern) 50%, var(--blood) 80%, transparent);
-  opacity: 0.6;
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 header h1 {
   margin: 0;
-  font-family: 'UnifrakturCook', serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 2.1rem;
-  letter-spacing: 0.01em;
-  color: var(--lantern);
-  text-shadow: 0 0 18px rgba(216, 177, 105, 0.25);
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
 }
 
-header h1 a { color: inherit; text-decoration: none; }
+header h1 a { color: var(--text); }
+header h1 a:hover { color: var(--red); }
+header h1 span { color: var(--red); }
 
-header .eyebrow {
-  display: block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ash);
-  margin-bottom: 0.35rem;
-}
-
-nav {
-  display: flex;
-  gap: 0.25rem;
-  flex-wrap: wrap;
-}
+nav { display: flex; gap: 0.25rem; flex-wrap: wrap; }
 
 nav a {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.78rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--ash);
-  padding: 0.45rem 0.8rem;
-  border: 1px solid transparent;
-  border-radius: 2px;
+  color: var(--muted);
+  padding: 0.4rem 0.7rem;
+  border-radius: 4px;
 }
 
-nav a:hover {
-  color: var(--parchment);
-  border-color: var(--stitch);
-}
-
-nav a.active {
-  color: var(--void);
-  background: var(--lantern);
-  border-color: var(--lantern);
-}
+nav a:hover { color: var(--text); background: var(--panel); }
+nav a.active { color: var(--bg); background: var(--red); }
 
 main {
-  max-width: 980px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2.75rem 1.5rem 4rem;
-  position: relative;
-  z-index: 1;
+  padding: 3rem 2rem 5rem;
 }
 
 main h2 {
-  font-family: 'UnifrakturCook', serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
-  font-size: 1.7rem;
-  color: var(--parchment);
-  margin: 0 0 0.5rem;
-  border: none;
+  font-size: 1.5rem;
+  margin: 0 0 0.4rem;
 }
 
-main > p {
-  color: var(--ash);
-  max-width: 60ch;
-  margin-bottom: 2rem;
-}
+main > p { color: var(--muted); max-width: 56ch; margin-bottom: 2.5rem; }
 
-/* ---- hero (home page) ---- */
-.hero {
-  border: 1px solid var(--stitch);
-  background: var(--panel);
-  padding: 2.5rem 2rem;
-  margin-bottom: 2.5rem;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border: 1px dashed var(--stitch);
-  pointer-events: none;
-}
+/* ---- hero ---- */
+.hero { margin-bottom: 3rem; max-width: 62ch; }
 
 .hero .eyebrow {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.25em;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--blood-bright);
+  color: var(--red);
   margin: 0 0 0.75rem;
 }
 
 .hero h2 {
-  font-size: 2.1rem;
-  margin-bottom: 0.75rem;
+  font-size: 2.4rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
 }
 
-.hero p {
-  color: var(--ash);
-  max-width: 62ch;
-  font-size: 1.1rem;
-}
+.hero p { color: var(--muted); font-size: 1.05rem; max-width: 56ch; }
 
-/* ---- card grid ---- */
+/* ---- grid / cards ---- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 1.1rem;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .card {
   background: var(--panel);
-  border: 1px solid var(--stitch);
-  border-radius: 3px;
-  padding: 1.25rem 1.25rem 1.4rem;
+  padding: 1.5rem;
   position: relative;
 }
 
-.card::before {
-  /* stitched inset border, like a hex-tag on Entity trials */
-  content: "";
-  position: absolute;
-  inset: 5px;
-  border: 1px dashed rgba(143, 133, 119, 0.25);
-  pointer-events: none;
-  border-radius: 2px;
-}
-
-.card:hover {
-  transform: translateY(-2px);
-  border-color: var(--blood-bright);
-}
-
-.card.survivor:hover { border-color: var(--fog-bright); }
+.card:hover { background: var(--panel-hover); }
 
 .card h3 {
-  margin: 0 0 0.5rem;
-  font-family: 'Crimson Text', serif;
-  font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--parchment);
+  margin: 0 0 0.4rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
 }
 
-.card h3 a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--stitch); }
-.card h3 a:hover { border-color: var(--lantern); color: var(--lantern); }
+.card h3 a { color: var(--text); }
+.card h3 a:hover { color: var(--red); }
 
-.card p { margin: 0 0 0.5rem; color: var(--ash); font-size: 0.95rem; }
+.card p { margin: 0 0 0.6rem; color: var(--muted); font-size: 0.92rem; }
 
-/* hex rank badge, like a perk-icon frame off a trial gauge */
+/* rank shown as a big faded number, not a badge */
 .card .rank {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.04em;
-  color: var(--parchment);
-  background: var(--blood);
-  padding: 0.3rem 0.7rem;
-  clip-path: polygon(8% 0, 92% 0, 100% 50%, 92% 100%, 8% 100%, 0 50%);
-  margin-bottom: 0.6rem;
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--border);
+  -webkit-text-stroke: 1px var(--muted);
+  margin-bottom: 0.5rem;
 }
 
-.card.survivor .rank { background: var(--fog); }
+.card.survivor .rank { -webkit-text-stroke-color: var(--teal); }
+.card.survivor h3 a:hover { color: var(--teal); }
+.card.survivor:hover { box-shadow: inset 3px 0 0 var(--teal); }
+.card:not(.survivor):hover { box-shadow: inset 3px 0 0 var(--red); }
 
 .tag {
   display: inline-block;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.02em;
-  color: var(--ash);
-  background: var(--panel-2);
-  border: 1px solid var(--stitch);
-  padding: 0.15rem 0.55rem;
-  border-radius: 2px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
   margin: 0.15rem 0.3rem 0 0;
 }
 
 .placeholder-note {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 0.8rem;
-  letter-spacing: 0.02em;
   background: var(--panel);
-  border: 1px solid var(--blood);
-  color: var(--lantern);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--red);
+  color: var(--muted);
   padding: 0.75rem 1rem;
-  border-radius: 2px;
+  border-radius: 4px;
   margin-bottom: 1.75rem;
 }
 
-.placeholder-note::before { content: "⚠ UNVERIFIED FILE — "; color: var(--blood-bright); }
-
 footer {
   text-align: center;
-  font-family: 'JetBrains Mono', monospace;
-  color: var(--ash);
-  font-size: 0.72rem;
-  letter-spacing: 0.05em;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--muted);
+  font-size: 0.75rem;
   padding: 2.5rem 1rem 3rem;
-  border-top: 1px solid var(--stitch);
+  border-top: 1px solid var(--border);
   margin-top: 2rem;
 }
