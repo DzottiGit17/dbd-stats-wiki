@@ -67,12 +67,19 @@ function renderTopPerkIcons(perks, perkInfo) {
   const tiles = top4
     .map((p) => {
       const info = perkInfo[p.name];
-      const tooltip = info ? `${p.name} — ${info.effect}` : p.name;
+      const effect = info ? info.effect : "No description available yet.";
       const iconSrc = info && info.icon;
       const inner = iconSrc
         ? `<img src="${iconSrc}" alt="${p.name}" loading="lazy">`
         : `<span class="perk-icon-fallback">${p.name.charAt(0)}</span>`;
-      return `<div class="perk-icon-tile" title="${tooltip.replace(/"/g, "&quot;")}">${inner}</div>`;
+      return `
+        <div class="perk-icon-tile">
+          ${inner}
+          <div class="perk-tooltip">
+            <span class="perk-tooltip-name">${p.name}</span>
+            <span class="perk-tooltip-effect">${effect}</span>
+          </div>
+        </div>`;
     })
     .join("");
   return `<div class="perk-icon-strip">${tiles}</div>`;
