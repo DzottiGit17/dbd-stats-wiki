@@ -50,11 +50,13 @@ The actual public site lives in `docs/` and is served by GitHub Pages directly f
 ```
 docs/
 ├── index.html, killers.html, survivors.html, perks.html, builds.html, trivia.html
-├── css/style.css
-├── js/app.js          # fetches docs/data/*.json and renders cards
+├── css/style.css      # Bootstrap variable overrides + custom red/teal DBD skin
+├── js/app.js          # fetches docs/data/*.json and renders Bootstrap card/col markup
 ├── data/*.json        # { "placeholder": bool, "items": [...] }  ← the site's actual content
 └── .nojekyll           # disable Jekyll processing
 ```
+
+Uses **Bootstrap 5.3** via CDN (`<link>`/`<script>` tags, no build step — still a plain static site). `css/style.css` loads after Bootstrap and overrides its CSS variables (`--bs-body-bg`, `--bs-primary`, `--bs-card-bg`, etc.) plus adds the site's own type scale and gradient/rank-number treatment. Layout uses Bootstrap's grid (`row row-cols-* g-3`) and `navbar`/`card` components — don't reintroduce the old hand-rolled `.grid`/custom-nav markup from before.
 
 - The repo is **private** on GitHub (`DzottiGit17/dbd-stats-wiki` or similar) — only `docs/` is public-facing via Pages; `wiki/`, `.raw/`, and `CLAUDE.md` sit in the same private repo but aren't served.
 - Workflow: fill in `wiki/killers/`, `wiki/perks/`, etc. from real sources first → once a page has solid data, mirror it into the matching `docs/data/*.json` entry (drop the `placeholder` flag once real data is in) → commit → push → Pages redeploys automatically (usually <1 min).

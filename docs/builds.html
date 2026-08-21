@@ -1,33 +1,42 @@
 <title>Builds — DBD Stats & Builds</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 
-<header>
-  <h1><a href="index.html">DBD<span>.</span>stats</a></h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="killers.html">Killers</a>
-    <a href="survivors.html">Survivors</a>
-    <a href="perks.html">Perks</a>
-    <a href="builds.html" class="active">Builds</a>
-    <a href="trivia.html">Trivia</a>
-  </nav>
-</header>
+<nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">DBD<span class="accent">.</span>stats</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="killers.html">Killers</a></li>
+        <li class="nav-item"><a class="nav-link" href="survivors.html">Survivors</a></li>
+        <li class="nav-item"><a class="nav-link" href="perks.html">Perks</a></li>
+        <li class="nav-item"><a class="nav-link active" href="builds.html">Builds</a></li>
+        <li class="nav-item"><a class="nav-link" href="trivia.html">Trivia</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<main>
-  <h2>Builds — Best Combos & Fun Loadouts</h2>
-  <div class="grid" id="builds-grid"></div>
+<main class="container py-5">
+  <h2 class="page-title">Builds — Best Combos & Fun Loadouts</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-2" id="builds-grid"></div>
 </main>
 
-<footer>Data is community/manually sourced — see confidence notes on trivia pages.</footer>
+<footer class="text-center py-5">Data is community/manually sourced — see confidence notes on trivia pages.</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/app.js"></script>
 <script>
   loadAndRender("data/builds.json", "builds-grid", (b) => el(`
-    <div class="card${b.side === "survivor" ? " survivor" : ""}">
-      <span class="rank">${b.category}</span>
-      <h3>${b.name}</h3>
-      <p>${b.why_it_works || ""}</p>
+    <div class="card${b.side === "survivor" ? " survivor" : ""} h-100"><div class="card-body">
+      <span class="tag">${b.category}</span>
+      <h3 class="card-title mt-2">${b.name}</h3>
+      <p class="card-text">${b.why_it_works || ""}</p>
       ${(b.perks || []).map(p => `<span class="tag">${p}</span>`).join("")}
-    </div>
+    </div></div>
   `));
 </script>

@@ -1,33 +1,42 @@
 <title>Killers — DBD Stats & Builds</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 
-<header>
-  <h1><a href="index.html">DBD<span>.</span>stats</a></h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="killers.html" class="active">Killers</a>
-    <a href="survivors.html">Survivors</a>
-    <a href="perks.html">Perks</a>
-    <a href="builds.html">Builds</a>
-    <a href="trivia.html">Trivia</a>
-  </nav>
-</header>
+<nav class="navbar navbar-expand-lg sticky-top navbar-custom">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">DBD<span class="accent">.</span>stats</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="killers.html">Killers</a></li>
+        <li class="nav-item"><a class="nav-link" href="survivors.html">Survivors</a></li>
+        <li class="nav-item"><a class="nav-link" href="perks.html">Perks</a></li>
+        <li class="nav-item"><a class="nav-link" href="builds.html">Builds</a></li>
+        <li class="nav-item"><a class="nav-link" href="trivia.html">Trivia</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<main>
-  <h2>Killers — Usage Rankings</h2>
-  <div class="grid" id="killers-grid"></div>
+<main class="container py-5">
+  <h2 class="page-title">Killers — Usage Rankings</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-2" id="killers-grid"></div>
 </main>
 
-<footer>Data is community/manually sourced — see confidence notes on trivia pages.</footer>
+<footer class="text-center py-5">Data is community/manually sourced — see confidence notes on trivia pages.</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/app.js"></script>
 <script>
   loadAndRender("data/killers.json", "killers-grid", (k) => el(`
-    <div class="card">
-      ${k.usage_rank ? `<span class="rank">#${k.usage_rank} used</span>` : ""}
-      <h3>${k.name}</h3>
-      <p>${k.power || ""}</p>
+    <div class="card h-100"><div class="card-body">
+      ${k.usage_rank ? `<span class="rank">#${k.usage_rank}</span>` : ""}
+      <h3 class="card-title">${k.name}</h3>
+      <p class="card-text">${k.power || ""}</p>
       ${(k.common_perks_used || []).map(p => `<span class="tag">${p}</span>`).join("")}
-    </div>
+    </div></div>
   `));
 </script>
