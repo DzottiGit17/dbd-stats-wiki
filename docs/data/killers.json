@@ -2,6 +2,6 @@
   "placeholder": false,
   "note": "Only a couple of entries seeded so far — most killers still need real usage data.",
   "items": [
-    { "name": "Skull Merchant", "power": "Deploys tracking drones that scan and mark nearby survivors.", "usage_rank": null, "common_perks_used": [] }
+    { "name": "Skull Merchant", "power": "Deploys tracking drones that scan and mark nearby survivors.", "usage_rank": null, "common_perks_used": [], "icon": "assets/icons/killers/skull-merchant.png" }
   ]
 }
