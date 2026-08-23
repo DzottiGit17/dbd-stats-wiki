@@ -1,6 +1,6 @@
 {
   "placeholder": false,
-  "source": "NightLight.gg community stats (crowd-sourced match uploads), 28-day window 23 Jul – 20 Aug 2026, 54,333 players. Confidence: community-sourced. (The Troupe / Aestri Yazar & Baermar Uraz skipped — paired-character entity.)",
+  "source": "NightLight.gg community stats (crowd-sourced match uploads), 28-day window 23 Jul – 20 Aug 2026, 54,333 players. Confidence: community-sourced. All 53 survivors have a detail-page perk breakdown in docs/data/survivor-perks/. (The Troupe / Aestri Yazar & Baermar Uraz skipped — paired-character entity.)",
   "items": [
     { "name": "Sable Ward", "usage_rank": 1, "usage_rate_pct": 5.96, "escape_rate_pct": 48.97, "common_perks_used": [], "icon": "assets/icons/survivors/s41.png" },
     { "name": "Vee Boonyasak", "usage_rank": 2, "usage_rate_pct": 5.46, "escape_rate_pct": 57.09, "common_perks_used": [], "icon": "assets/icons/survivors/s49.png" },

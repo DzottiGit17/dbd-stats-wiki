@@ -6,7 +6,7 @@ updated: 2026-08-21T00:00:00
 
 # Full Killer Roster
 
-All 44 killers now have **real, current pick-rate and kill-rate data** — not just icons/lore. Source: NightLight.gg community stats (crowd-sourced match uploads), 28-day window 23 Jul – 20 Aug 2026, 13,645 games. Full list in `docs/data/killers.json`.
+All 44 killers now have **real, current pick-rate and kill-rate data**, AND every one has a full per-character "Most Used Perks" breakdown on its detail page (`docs/data/killer-perks/<slug>.json`). Source: NightLight.gg community stats (crowd-sourced match uploads), 28-day window 23 Jul – 20 Aug 2026, 13,645 games. Full list in `docs/data/killers.json`.
 
 ## Top 5 by pick rate
 1. The Slasher — 8.24% pick, 50.71% kill

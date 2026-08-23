@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Agitation", "usage_pct": 32, "kill_pct": 51.31 },
+    { "name": "Brutal Strength", "usage_pct": 27.45, "kill_pct": 47.8 },
+    { "name": "Corrupt Intervention", "usage_pct": 26.48, "kill_pct": 50.84 },
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 16.28, "kill_pct": 53.04 },
+    { "name": "Iron Grasp", "usage_pct": 16, "kill_pct": 56.12 },
+    { "name": "Hex: No One Escapes Death", "usage_pct": 15.03, "kill_pct": 45.13 },
+    { "name": "Unnerving Presence", "usage_pct": 11.86, "kill_pct": 38.73 },
+    { "name": "Deadlock", "usage_pct": 9.24, "kill_pct": 47.02 },
+    { "name": "Surge", "usage_pct": 8.69, "kill_pct": 49.22 },
+    { "name": "Hex: Ruin", "usage_pct": 8.28, "kill_pct": 55.07 }
+  ]
+}

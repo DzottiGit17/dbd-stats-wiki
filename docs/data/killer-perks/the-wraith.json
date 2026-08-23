@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Bamboozle", "usage_pct": 24.55, "kill_pct": 50.23 },
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 21.1, "kill_pct": 47.88 },
+    { "name": "Sloppy Butcher", "usage_pct": 19.67, "kill_pct": 46.11 },
+    { "name": "Pop Goes the Weasel", "usage_pct": 13.95, "kill_pct": 47.72 },
+    { "name": "Brutal Strength", "usage_pct": 12.75, "kill_pct": 47.83 },
+    { "name": "Hex: No One Escapes Death", "usage_pct": 12.16, "kill_pct": 51.66 },
+    { "name": "Predator", "usage_pct": 11.68, "kill_pct": 45.83 },
+    { "name": "Surge", "usage_pct": 11.44, "kill_pct": 45.96 },
+    { "name": "A Nurse's Calling", "usage_pct": 10.49, "kill_pct": 40.93 },
+    { "name": "Enduring", "usage_pct": 9.42, "kill_pct": 43.98 }
+  ]
+}

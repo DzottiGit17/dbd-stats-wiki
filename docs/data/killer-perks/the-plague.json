@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Corrupt Intervention", "usage_pct": 46.57, "kill_pct": 49.9 },
+    { "name": "Thanatophobia", "usage_pct": 39.06, "kill_pct": 48.04 },
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 29.4, "kill_pct": 46.15 },
+    { "name": "Pop Goes the Weasel", "usage_pct": 12.02, "kill_pct": 55.2 },
+    { "name": "Hex: Ruin", "usage_pct": 11.8, "kill_pct": 54.62 },
+    { "name": "Infectious Fright", "usage_pct": 11.37, "kill_pct": 53.33 },
+    { "name": "Deadlock", "usage_pct": 11.37, "kill_pct": 53.04 },
+    { "name": "Dead Man's Switch", "usage_pct": 9.87, "kill_pct": 50 },
+    { "name": "Hex: Plaything", "usage_pct": 9.66, "kill_pct": 54.21 },
+    { "name": "Lethal Pursuer", "usage_pct": 9.44, "kill_pct": 41.75 }
+  ]
+}

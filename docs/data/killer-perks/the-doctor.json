@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Overcharge", "usage_pct": 30.81, "kill_pct": 52.31 },
+    { "name": "Distressing", "usage_pct": 25.23, "kill_pct": 48.15 },
+    { "name": "Unnerving Presence", "usage_pct": 22.52, "kill_pct": 45.04 },
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 17.12, "kill_pct": 51.85 },
+    { "name": "Coulrophobia", "usage_pct": 16.04, "kill_pct": 47.09 },
+    { "name": "Merciless Storm", "usage_pct": 14.41, "kill_pct": 46.37 },
+    { "name": "Hex: Huntress Lullaby", "usage_pct": 12.43, "kill_pct": 46.67 },
+    { "name": "Monitor & Abuse", "usage_pct": 10.81, "kill_pct": 42.66 },
+    { "name": "Surge", "usage_pct": 9.73, "kill_pct": 45.9 },
+    { "name": "Sloppy Butcher", "usage_pct": 9.01, "kill_pct": 43.75 }
+  ]
+}

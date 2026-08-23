@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 44.36, "kill_pct": 45.62 },
+    { "name": "Barbecue & Chili", "usage_pct": 16.73, "kill_pct": 42.31 },
+    { "name": "Lethal Pursuer", "usage_pct": 16.54, "kill_pct": 43.46 },
+    { "name": "Dead Man's Switch", "usage_pct": 15.56, "kill_pct": 48.17 },
+    { "name": "Pop Goes the Weasel", "usage_pct": 14.2, "kill_pct": 48.75 },
+    { "name": "Surge", "usage_pct": 13.62, "kill_pct": 48.3 },
+    { "name": "Weave Attunement", "usage_pct": 13.23, "kill_pct": 58.49 },
+    { "name": "Nowhere to Hide", "usage_pct": 12.26, "kill_pct": 41.94 },
+    { "name": "Turn Back The Clock", "usage_pct": 11.67, "kill_pct": 53.85 },
+    { "name": "Corrupt Intervention", "usage_pct": 11.28, "kill_pct": 50.76 }
+  ]
+}

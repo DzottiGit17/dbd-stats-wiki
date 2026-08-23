@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Champion of Light", "usage_pct": 20.83, "escape_pct": 30.43 },
+    { "name": "Deja Vu", "usage_pct": 18.12, "escape_pct": 36 },
+    { "name": "Windows of Opportunity", "usage_pct": 17.93, "escape_pct": 34.85 },
+    { "name": "Lithe", "usage_pct": 17.12, "escape_pct": 38.1 },
+    { "name": "Resilience", "usage_pct": 17.03, "escape_pct": 32.98 },
+    { "name": "Decisive Strike", "usage_pct": 15.4, "escape_pct": 32.94 },
+    { "name": "Dead Hard", "usage_pct": 14.67, "escape_pct": 35.8 },
+    { "name": "Sprint Burst", "usage_pct": 14.4, "escape_pct": 35.22 },
+    { "name": "Five Moves Ahead", "usage_pct": 12.05, "escape_pct": 42.86 },
+    { "name": "Finesse", "usage_pct": 9.15, "escape_pct": 46.53 }
+  ]
+}

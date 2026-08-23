@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 33.83, "kill_pct": 47.02 },
+    { "name": "No Way Out", "usage_pct": 19.33, "kill_pct": 45.06 },
+    { "name": "Starstruck", "usage_pct": 14, "kill_pct": 38.86 },
+    { "name": "Grim Embrace", "usage_pct": 12.67, "kill_pct": 57.41 },
+    { "name": "Corrupt Intervention", "usage_pct": 12.67, "kill_pct": 53.75 },
+    { "name": "Lethal Pursuer", "usage_pct": 12.33, "kill_pct": 45.34 },
+    { "name": "Pop Goes the Weasel", "usage_pct": 12, "kill_pct": 50.35 },
+    { "name": "Nowhere to Hide", "usage_pct": 11.33, "kill_pct": 54.84 },
+    { "name": "Dead Man's Switch", "usage_pct": 10.83, "kill_pct": 49.64 },
+    { "name": "Darkness Revealed", "usage_pct": 10.33, "kill_pct": 51.08 }
+  ]
+}

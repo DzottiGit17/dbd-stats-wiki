@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1 (note: only 12 games sampled — very noisy, newest killer)",
+  "perks": [
+    { "name": "Lethal Pursuer", "usage_pct": 50, "kill_pct": 44.44 },
+    { "name": "Corrupt Intervention", "usage_pct": 33.33, "kill_pct": 8.33 },
+    { "name": "Gearhead", "usage_pct": 25, "kill_pct": 22.22 },
+    { "name": "Nemesis", "usage_pct": 25, "kill_pct": 0 },
+    { "name": "Scourge Hook: Floods of Rage", "usage_pct": 25, "kill_pct": 22.22 },
+    { "name": "Hex: Undying", "usage_pct": 16.67, "kill_pct": 50 },
+    { "name": "Lay Waste", "usage_pct": 16.67, "kill_pct": 0 },
+    { "name": "Celestial Witness", "usage_pct": 16.67, "kill_pct": 50 },
+    { "name": "Predator", "usage_pct": 16.67, "kill_pct": 50 },
+    { "name": "Hex: Ruin", "usage_pct": 16.67, "kill_pct": 50 }
+  ]
+}

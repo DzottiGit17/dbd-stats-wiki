@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1 — very small sample (only 24 games; character is new to PTB as of Aug 2026), treat percentages as low-confidence",
+  "perks": [
+    { "name": "Salvation's Cry", "usage_pct": 51.72, "escape_pct": 60 },
+    { "name": "Boon: Illumination", "usage_pct": 48.28, "escape_pct": 64.29 },
+    { "name": "Fruits of Your Labor", "usage_pct": 34.48, "escape_pct": 60 },
+    { "name": "Sprint Burst", "usage_pct": 17.24, "escape_pct": 20 },
+    { "name": "Five Moves Ahead", "usage_pct": 17.24, "escape_pct": 80 },
+    { "name": "Fixated", "usage_pct": 13.79, "escape_pct": 50 },
+    { "name": "Vigil", "usage_pct": 13.79, "escape_pct": 0 },
+    { "name": "Technician", "usage_pct": 13.79, "escape_pct": 0 },
+    { "name": "Decisive Strike", "usage_pct": 13.79, "escape_pct": 0 },
+    { "name": "Finesse", "usage_pct": 10.34, "escape_pct": 66.67 }
+  ]
+}

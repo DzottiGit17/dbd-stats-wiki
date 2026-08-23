@@ -1,6 +1,8 @@
 {
   "placeholder": false,
   "items": [
-    { "name": "Gen Rush Squad", "side": "survivor", "category": "meta", "perks": ["Prove Thyself", "Windows of Opportunity", "Bond", "Adrenaline"], "why_it_works": "Built entirely from the game's most-used survivor perks: co-op gens fast, win chases when they happen, coordinate without comms, and cash in Adrenaline at the endgame." }
+    { "name": "Gen Rush Squad", "side": "survivor", "category": "meta", "perks": ["Prove Thyself", "Windows of Opportunity", "Bond", "Adrenaline"], "why_it_works": "Built entirely from the game's most-used survivor perks: co-op gens fast, win chases when they happen, coordinate without comms, and cash in Adrenaline at the endgame." },
+    { "name": "Slowdown Stack", "side": "killer", "category": "meta", "perks": ["Scourge Hook: Pain Resonance", "Sloppy Butcher", "Pop Goes the Weasel", "Jolt"], "why_it_works": "The four most-used killer perks in the current NightLight data, stacked together: every hook and every down chips away at generator progress, buying time even in a bad chase-heavy match." },
+    { "name": "Boon Squad", "side": "survivor", "category": "fun", "perks": ["Boon: Circle of Healing", "Boon: Shadow Step", "Boon: Exponential", "Empathic Connection"], "why_it_works": "Coordinate as a team to snowball totems into a self-sufficient healing/stealth/pick-up network — less about optimal solo play, more about turning the map into a shrine crawl with your squad." }
   ]
 }

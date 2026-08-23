@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 32.85, "kill_pct": 47.27 },
+    { "name": "Hex: Ruin", "usage_pct": 24.15, "kill_pct": 60.38 },
+    { "name": "Corrupt Intervention", "usage_pct": 14.98, "kill_pct": 39.68 },
+    { "name": "Forced Penance", "usage_pct": 14.49, "kill_pct": 41.67 },
+    { "name": "Hex: Undying", "usage_pct": 13.53, "kill_pct": 60.32 },
+    { "name": "Dead Man's Switch", "usage_pct": 12.56, "kill_pct": 42.19 },
+    { "name": "Sloppy Butcher", "usage_pct": 12.08, "kill_pct": 55.93 },
+    { "name": "Oppression", "usage_pct": 12.08, "kill_pct": 55.17 },
+    { "name": "Hex: Thrill of the Hunt", "usage_pct": 11.11, "kill_pct": 70 },
+    { "name": "Barbecue & Chili", "usage_pct": 11.11, "kill_pct": 36.54 }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Wide Open Throttle", "usage_pct": 22.09, "escape_pct": 33.81 },
+    { "name": "Cross-Examination", "usage_pct": 19.83, "escape_pct": 36.94 },
+    { "name": "Lithe", "usage_pct": 19.2, "escape_pct": 36.51 },
+    { "name": "Lend a Hand", "usage_pct": 18.99, "escape_pct": 37.11 },
+    { "name": "Deja Vu", "usage_pct": 14.97, "escape_pct": 35.29 },
+    { "name": "Windows of Opportunity", "usage_pct": 14.34, "escape_pct": 34.64 },
+    { "name": "Sprint Burst", "usage_pct": 12.5, "escape_pct": 36.9 },
+    { "name": "Five Moves Ahead", "usage_pct": 12.33, "escape_pct": 37.14 },
+    { "name": "Decisive Strike", "usage_pct": 10.64, "escape_pct": 35.43 },
+    { "name": "Resilience", "usage_pct": 10.57, "escape_pct": 37.33 }
+  ]
+}

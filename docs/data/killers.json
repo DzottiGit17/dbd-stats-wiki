@@ -1,6 +1,6 @@
 {
   "placeholder": false,
-  "source": "NightLight.gg community stats (crowd-sourced match uploads), 28-day window 23 Jul – 20 Aug 2026, 13,645 games. Confidence: community-sourced.",
+  "source": "NightLight.gg community stats (crowd-sourced match uploads), 28-day window 23 Jul – 20 Aug 2026, 13,645 games. Confidence: community-sourced. All 44 killers have a detail-page perk breakdown in docs/data/killer-perks/.",
   "items": [
     { "name": "The Slasher", "power": "Near-invulnerable, supernaturally strong pursuit (Jason Voorhees).", "usage_rank": 1, "usage_rate_pct": 8.24, "kill_rate_pct": 50.71, "common_perks_used": [], "icon": "assets/icons/killers/k43.png" },
     { "name": "The Ghoul", "power": "Extends predatory limbs to attack and traverse terrain rapidly.", "usage_rank": 2, "usage_rate_pct": 4.77, "kill_rate_pct": 51.77, "common_perks_used": [], "icon": "assets/icons/killers/k39.png" },

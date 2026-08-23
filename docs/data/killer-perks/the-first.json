@@ -1,0 +1,15 @@
+{
+  "source": "NightLight.gg, stats since patch 10.0.1",
+  "perks": [
+    { "name": "Scourge Hook: Pain Resonance", "usage_pct": 35.56, "kill_pct": 54.96 },
+    { "name": "Turn Back The Clock", "usage_pct": 28.11, "kill_pct": 48.65 },
+    { "name": "Lethal Pursuer", "usage_pct": 21.89, "kill_pct": 53.72 },
+    { "name": "Nowhere to Hide", "usage_pct": 19.1, "kill_pct": 55.83 },
+    { "name": "Hex: Hive Mind", "usage_pct": 17.7, "kill_pct": 54.8 },
+    { "name": "I'm All Ears", "usage_pct": 15.84, "kill_pct": 53.64 },
+    { "name": "Hex: Ruin", "usage_pct": 15.37, "kill_pct": 54.3 },
+    { "name": "Dead Man's Switch", "usage_pct": 14.13, "kill_pct": 52.88 },
+    { "name": "Corrupt Intervention", "usage_pct": 13.66, "kill_pct": 53.48 },
+    { "name": "Barbecue & Chili", "usage_pct": 12.58, "kill_pct": 51.69 }
+  ]
+}
