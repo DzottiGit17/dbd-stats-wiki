@@ -34,7 +34,9 @@
 <script>
   loadAndRender("data/perks.json", "perks-grid", (p) => el(`
     <div class="card${p.side === "survivor" ? " survivor" : ""} h-100"><div class="card-body">
-      ${p.icon ? `<img class="entity-icon perk-icon" src="${p.icon}" alt="${p.name} icon" loading="lazy">` : ""}
+      ${p.icon
+        ? `<img class="entity-icon perk-icon" src="${p.icon}" alt="${p.name} icon" loading="lazy">`
+        : `<span class="perk-icon-fallback-sm">${p.name.charAt(0)}</span>`}
       ${p.usage_rank ? `<span class="rank">#${p.usage_rank}</span>` : ""}
       <h3 class="card-title">${p.name}</h3>
       <p class="card-text">${p.effect || ""}</p>
